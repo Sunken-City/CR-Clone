@@ -9,10 +9,13 @@ public class StandardBullet : MonoBehaviour
     public float angle = 0f;
     public float damage = 10f;
 
+    private Rigidbody bullet;
+
     // Use this for initialization
     void Start()
     {
-        gameObject.rigidbody.velocity = new Vector3(transform.forward.x * speed, getYVelocity(), 0.0f);
+        bullet = this.GetComponent<Rigidbody>();
+        bullet.velocity = new Vector3(bullet.velocity.x * speed, bullet.velocity.y, bullet.velocity.z);
     }
 
     // Update is called once per frame
