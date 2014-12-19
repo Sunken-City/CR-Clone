@@ -4,7 +4,7 @@ using System.Collections;
 public class StandardBullet : MonoBehaviour
 {
 
-    public float speed = 1f;
+    public float speed = 0.001f;
     //This angle should be in degrees, not radians.
     public float angle = 0f;
     public float damage = 10f;
