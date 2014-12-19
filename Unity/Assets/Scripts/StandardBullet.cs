@@ -15,7 +15,7 @@ public class StandardBullet : MonoBehaviour
     void Start()
     {
         bullet = this.GetComponent<Rigidbody>();
-        bullet.velocity = new Vector3(bullet.velocity.x * speed, bullet.velocity.y, bullet.velocity.z);
+        bullet.velocity = new Vector3(transform.forward.x * speed, transform.forward.y * speed, 0.0f);
     }
 
     // Update is called once per frame
