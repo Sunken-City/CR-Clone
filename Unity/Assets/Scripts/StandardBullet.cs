@@ -4,7 +4,7 @@ using System.Collections;
 public class StandardBullet : MonoBehaviour
 {
 
-    public float speed = 50f;
+    public float speed = 1f;
     //This angle should be in degrees, not radians.
     public float angle = 0f;
     public float damage = 10f;
@@ -15,7 +15,7 @@ public class StandardBullet : MonoBehaviour
     void Start()
     {
         bullet = this.GetComponent<Rigidbody>();
-        bullet.velocity = new Vector3(transform.forward.x * speed, transform.forward.y * speed, 0.0f);
+        bullet.velocity = (bullet.transform.forward * speed);
     }
 
     // Update is called once per frame
