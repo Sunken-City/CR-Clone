@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Gun : MonoBehaviour
 {
-
     public Transform bullet;
 
     // Use this for initialization
